@@ -110,11 +110,13 @@ Answer: Yes
 例如要做一個類似 gumroad.com 的平台
 但是收付款方式 我只想要使用BTC
 能否使用這樣的SAAS來搭建？
+
 Answer: Yes
 
 
 問題1：
 block.io能夠用在哪些場景？
+
 Answer:
 Block.io就是一个钱包服务，理论上来说，可以使用它来做一个内嵌在平台网站中的钱包。
 
@@ -124,10 +126,16 @@ A third-party API client is one that interacts with bitcoin through a third-part
 問題2:
 做一個block.io 要如何做？
 
+Answer: I think it is totally possible, but requires a lot of work to do so. Coding such a service requires a fully and robust understanding of not only Bitcoins but also cryptology and other information security stuff. I think such a task usually requires a team.
+
+Some useful links for kicking a start into this task:
+1. https://www.quora.com/How-do-I-start-building-a-Bitcoin-Wallet-Service
+2. https://medium.com/@andresilva/step-by-step-guide-to-programming-your-own-bitcoin-wallet-9d38942c8ae0
+
 
 * Block.io
 ** My Notes
-It seems like in order to use Block.io, a user should have a Block.io wallet so that each user can get a 
+It seems like in order to use Block.io, a user should have a Block.io wallet so that each user can get an API key and secret key.
 
 ** Basic MultiSig Wallet API
 Require two signatures: user's, Block.io's
@@ -178,10 +186,11 @@ block_io.get_balance({}, console.log);
 
 *And for more, see [[https://block.io/api/simple/nodejs][Nodejs]]*
 ** My Questions
-1. What are labels?
+- What are labels?
 Labels are short, easy-to-remember words for long, complicated wallet addresses. For example, it is alot easier to remember the label "homewallet" than it is to remember the wallet address "DFi9yMNjBqq1rJwnkncXYxj72LhnyU...".
-
 When you create an address using your Wallet, or using the get_new_address API call, we create a random wallet address for you. If you wish to label this wallet address, you can specify this an alpha-numeric string in the input field on the Create Address dialog, or pass it as a value to the label parameter in the API call.
+- If we are going to build a platform based on Block.io, does it mean that every user should get a block.io wallet and copy their API keys and other required informations to our platform so that we store(or should we be allowed to do so??) that information for them?
+
 
 * Bitcoin Edge Tutorials
 For understanding [[https://github.com/bitcoin/bitcoin][Bitcoin Core]], the following links are quite useful:
@@ -201,6 +210,9 @@ You might also find it useful to read: [[https://github.com/bitcoin/bitcoin/tree
 
 ** Block.io usage Video(PHP)
 https://www.youtube.com/watch?v=0cMhcZb8aNw
+
+** Maybe a Useful Book
+https://www.amazon.com/Building-Bitcoin-Websites-Beginners-Development/dp/153494544X
 
 
 
