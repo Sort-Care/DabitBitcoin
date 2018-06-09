@@ -90,11 +90,45 @@ consider the scenario of an attacker trying to generate an alternate chain faste
 例如我們要做一個國際的交易所
 需要一種能夠輕易的跨國的資金收發方式
 能否用來作為收款 跟付款的用途？
+Answer: Yes
 
 
 例如要做一個類似 gumroad.com 的平台
 但是收付款方式 我只想要使用BTC
 能否使用這樣的SAAS來搭建？
+Answer: Yes
+
+
+問題1：
+block.io能夠用在哪些場景？
+Answer:
+Block.io就是一个钱包服务，理论上来说，可以使用它来做一个内嵌在平台网站中的钱包。
+
+Third-party API client
+A third-party API client is one that interacts with bitcoin through a third-party system of application programming interfaces (APIs), rather than by connecting to the bitcoin network directly. The wallet may be stored by the user or by third-party servers, but all transactions go through a third party.
+
+問題2:
+做一個block.io 要如何做？
+
 
 * Block.io
 ** Basic MultiSig Wallet API
+Require two signatures: user's, Block.io's
+** API keys
+** dTrust Example Scripts
+*Replies I got back from Block.io*
+Hi
+
+Ofcourse. Keep in mind dTrust requires you to hold on to your keys securely since we do not keep any backups for you. If you are comfortable with that, please specify a programming language in which you would like to build your product, and we can provide example scripts to get you going.
+
+The available languages for our SDKs are Ruby, Python, NodeJS, PHP.
+
+https://github.com/BlockIo/block_io-nodejs/blob/master/examples/dtrust.js
+https://github.com/BlockIo/block_io-python/blob/master/examples/dtrust.py
+
+
+* Bitcoin Edge Tutorials
+https://bitcoinedge.org/tutorials
+
+
+
