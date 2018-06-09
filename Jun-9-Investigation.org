@@ -83,6 +83,18 @@ Some linking is still unavoidable with multi-input transactions, which necessari
 consider the scenario of an attacker trying to generate an alternate chain faster than the honest chain
 [[https://en.wikipedia.org/wiki/Gambler%27s_ruin][Gambler's Ruin]]
 
+* Some Other Explainations
+** What is Bitcoin Address?
+A Bitcoin address is a single-use token. Like e-mail addresses, you can send bitcoins to a person by sending bitcoins to one of their addresses. However, unlike e-mail addresses, people have many different Bitcoin addresses and a unique address should be used for each transaction.
+
+For example:
+> 1B2S4Nf8jD3fshHodzuYhframoQsQaZEcZ
+** What is Bitcoin Wallet ID?
+A Wallet ID (also called your Wallet Identifier) acts similarly to a username you'd use to access your email, or log into Facebook. To log into your wallet, you'd use your Wallet ID, password, plus any form of Two Factor Authentication you've enabled.
+
+It looks like a string of letters and numbers, like the sample Wallet ID below:
+> 8a15ne4d-3d6c-6745-d282-da885h64pqf9
+
 
 * Target
 應用的場景舉例：
@@ -112,19 +124,49 @@ A third-party API client is one that interacts with bitcoin through a third-part
 
 
 * Block.io
+** My Notes
+It seems like in order to use Block.io, a user should have a Block.io wallet so that each user can get a 
+
 ** Basic MultiSig Wallet API
 Require two signatures: user's, Block.io's
 ** API keys
+
 ** dTrust Example Scripts
-*Replies I got back from Block.io*
+*Replies I got back from Block.io group*
+
 Hi
 
 Ofcourse. Keep in mind dTrust requires you to hold on to your keys securely since we do not keep any backups for you. If you are comfortable with that, please specify a programming language in which you would like to build your product, and we can provide example scripts to get you going.
 
 The available languages for our SDKs are Ruby, Python, NodeJS, PHP.
 
-https://github.com/BlockIo/block_io-nodejs/blob/master/examples/dtrust.js
-https://github.com/BlockIo/block_io-python/blob/master/examples/dtrust.py
+Here are links for Nodejs and python respectively:
+- https://github.com/BlockIo/block_io-nodejs/blob/master/examples/dtrust.js
+- https://github.com/BlockIo/block_io-python/blob/master/examples/dtrust.py
+
+** Install Block.io Lib
+*** Install
+#+BEGIN_SRC bash
+npm install block_io@1.0.9-2
+#+END_SRC
+
+*** Initialize
+#+BEGIN_SRC js
+var BlockIo = require('block_io');
+var version = 2; // API version
+var block_io = new BlockIo('YOUR API KEY', 'YOUR SECRET PIN', version);
+#+END_SRC
+where API key can be found in Block.io Wallet and *secret PIN* is set by user.
+
+*** Example Call
+#+BEGIN_SRC js
+block_io.get_new_address({'label': 'shibe1'}, console.log);
+#+END_SRC
+
+** Handling Bitcoin Address
+
+
+
 
 
 * Bitcoin Edge Tutorials
