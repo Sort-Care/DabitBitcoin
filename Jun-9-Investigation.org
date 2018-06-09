@@ -126,7 +126,7 @@ A third-party API client is one that interacts with bitcoin through a third-part
 問題2:
 做一個block.io 要如何做？
 
-Answer: I think it is totally possible, but requires a lot of work to do so. Coding such a service requires a fully and robust understanding of not only Bitcoins but also cryptology and other information security stuff. I think such a task usually requires a team.
+Answer: I think it is totally possible, but requires a lot of work to do so. Coding such a service requires a thorough understanding of not only Bitcoins but also cryptology and other information security stuff. I think such a task usually requires a team.
 
 Some useful links for kicking a start into this task:
 1. https://www.quora.com/How-do-I-start-building-a-Bitcoin-Wallet-Service
