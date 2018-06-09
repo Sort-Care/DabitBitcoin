@@ -178,7 +178,10 @@ block_io.get_balance({}, console.log);
 
 *And for more, see [[https://block.io/api/simple/nodejs][Nodejs]]*
 ** My Questions
-1. What is label?
+1. What are labels?
+Labels are short, easy-to-remember words for long, complicated wallet addresses. For example, it is alot easier to remember the label "homewallet" than it is to remember the wallet address "DFi9yMNjBqq1rJwnkncXYxj72LhnyU...".
+
+When you create an address using your Wallet, or using the get_new_address API call, we create a random wallet address for you. If you wish to label this wallet address, you can specify this an alpha-numeric string in the input field on the Create Address dialog, or pass it as a value to the label parameter in the API call.
 
 * Bitcoin Edge Tutorials
 For understanding [[https://github.com/bitcoin/bitcoin][Bitcoin Core]], the following links are quite useful:
@@ -193,8 +196,11 @@ You might also find it useful to read: [[https://github.com/bitcoin/bitcoin/tree
 ** Bitcoin Khan Academy Tutorial
 [[https://www.khanacademy.org/economics-finance-domain/core-finance/money-and-banking/bitcoin/v/bitcoin-cryptographic-hash-function][Bitcoin Tutorial]]
 
-** 
-And, just for fun: [[https://www.youtube.com/watch?v=UZBZPOEVyJA][Mining Bitcoin with Excel]]
+** Buzz
+ And, just for fun: [[https://www.youtube.com/watch?v=UZBZPOEVyJA][Mining Bitcoin with Excel]]
+
+** Block.io usage Video(PHP)
+https://www.youtube.com/watch?v=0cMhcZb8aNw
 
 
 
