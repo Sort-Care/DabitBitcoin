@@ -95,6 +95,8 @@ A Wallet ID (also called your Wallet Identifier) acts similarly to a username yo
 It looks like a string of letters and numbers, like the sample Wallet ID below:
 > 8a15ne4d-3d6c-6745-d282-da885h64pqf9
 
+A Wallet ID is only used for the login process, and it's different from a bitcoin address. In other words, it can't be used to send or receive funds. For security reasons, we strongly recommend you don't share your Wallet ID publicly, or with anyone.
+
 
 * Target
 應用的場景舉例：
@@ -164,13 +166,35 @@ block_io.get_new_address({'label': 'shibe1'}, console.log);
 #+END_SRC
 
 ** Handling Bitcoin Address
+*** Get New Address
+#+BEGIN_SRC js
+block_io.get_new_address({}, console.log);
+block_io.get_new_address({'label': 'LABEL'}, console.log);
+#+END_SRC
+*** Get Balance
+#+BEGIN_SRC js
+block_io.get_balance({}, console.log);
+#+END_SRC
 
-
-
-
+*And for more, see [[https://block.io/api/simple/nodejs][Nodejs]]*
+** My Questions
+1. What is label?
 
 * Bitcoin Edge Tutorials
-https://bitcoinedge.org/tutorials
+For understanding [[https://github.com/bitcoin/bitcoin][Bitcoin Core]], the following links are quite useful:
+
+1. https://bitcoin.org/en/developer-documentation
+2. https://bitcoinedge.org/tutorials
+3. https://github.com/bitcoinbook/bitcoinbook
+
+You might also find it useful to read: [[https://github.com/bitcoin/bitcoin/tree/4405b78d6059e536c36974088a8ed4d9f0f29898][the Oldest Version of Bitcoin Source]] since it has been there for 9 years and has been changed by thousands of programmers.
+
+* Appendix
+** Bitcoin Khan Academy Tutorial
+[[https://www.khanacademy.org/economics-finance-domain/core-finance/money-and-banking/bitcoin/v/bitcoin-cryptographic-hash-function][Bitcoin Tutorial]]
+
+** 
+And, just for fun: [[https://www.youtube.com/watch?v=UZBZPOEVyJA][Mining Bitcoin with Excel]]
 
 
 
