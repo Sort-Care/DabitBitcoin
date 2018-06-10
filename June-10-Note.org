@@ -1,9 +1,22 @@
 * Third Party API
 ** BlockChain Wallet API
 https://blockchain.info/api/blockchain_wallet_api
-Need a website to request an API key
+Need a running website to request an API key.
 *** Create Wallet API
 Create blockchain wallet programmatically!
+*URL*: http://localhost:3000/api/v2/create
+*Method*: POST or GET
+
+- $password The password for the new wallet. Must be at least 10 characters in length.
+- $api_code An API code with create wallets permission.
+- $priv A private key to add to the wallet (Wallet import format preferred). (Optional)
+- $label A label to set for the first address in the wallet. Alphanumeric only. (Optional)
+- $email An email to associate with the new wallet i.e. the email address of the user you are creating this wallet on behalf of. (Optional)
+Please create an API code here including permissions to "Create Wallets".
+
+
+
+** SpectroCoin Bitcoin API
 
 * Bitcoin Wallet
 * ETH
