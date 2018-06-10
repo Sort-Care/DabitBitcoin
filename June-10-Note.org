@@ -71,6 +71,7 @@ Allow wallets to show the user a natural language description of what the contra
 
 [[https://solidity.readthedocs.io/en/latest/solidity-by-example.html][Solidity By Examples]]
 
+Code at the beginning of that tutorial
 #+BEGIN_SRC java
 pragma solidity ^0.4.22;
 
