@@ -2,6 +2,9 @@
 ** BlockChain Wallet API
 *** My Note
 From the API description, it seems like a Wallet can be created. And the response will be a Wallet ID, an address for sending and receiving funds and a label attached to that address.
+
+But a running website is needed to apply for an API key. Here is a screenshot of what is needed:
+[[./imgs/blockchainAPI.png]]
 *** API Link
  https://blockchain.info/api/blockchain_wallet_api
  Need a running website to request an API key.
