@@ -7,6 +7,7 @@ But a running website is needed to apply for an API key. Here is a screenshot of
 [[./imgs/blockchainAPI.png]]
 *** API Link
  https://blockchain.info/api/blockchain_wallet_api
+
  Need a running website to request an API key.
 *** Create Wallet API
 Create blockchain wallet programmatically!
@@ -36,8 +37,11 @@ Response will be like:
 
 
 ** SpectroCoin Bitcoin API
+Forget about this one. Also need to sign up for an extra account.
 
 * Bitcoin Wallet
+
+
 * ETH
 ** 发行数字代币
 ** 一键发布平台(是否可靠)
