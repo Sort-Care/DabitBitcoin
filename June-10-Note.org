@@ -45,4 +45,210 @@ Forget about this one. Also need to sign up for an extra account.
 * ETH
 ** 发行数字代币
 ** 一键发布平台(是否可靠)
-** 智能合约
+** 智能合约(important)
+作用，能做到什么
+** Ethereum
+[[https://medium.com/@attores/step-by-step-guide-getting-started-with-ethereum-mist-wallet-772a3cc99af4][Step-by-Step Guide: Getting Started with Ethereum Mist Wallet]]
+** Solidity(a new language for smart contracts)
+https://www.ethereum.org/token
+
+Tokens in the Ethereum ecosystem can represent any fungible tradable good: coins, loyalty points, gold certificates, IOUs, in-game items, etc. Since all tokens implement some basic features in a standard way, this also means that your token will be instantly compatible with the Ethereum wallet and any other client or contract that uses the same standards.
+*** Event
+empty functions that you call to help clients like the Ethereum Wallet keep track of activities happening in the contract
+*** Comments
+Allow wallets to show the user a natural language description of what the contract is about to do.
+** Solidity Documentations
+[[https://solidity.readthedocs.io/en/v0.4.24/][Solidity Docs]]
+
+[[https://solidity.readthedocs.io/en/latest/solidity-by-example.html][Solidity By Examples]]
+
+#+BEGIN_SRC java
+pragma solidity ^0.4.22;
+
+/// @title Voting with delegation.
+contract Ballot {
+    // This declares a new complex type which will
+    // be used for variables later.
+    // It will represent a single voter.
+    struct Voter {
+        uint weight; // weight is accumulated by delegation
+        bool voted;  // if true, that person already voted
+        address delegate; // person delegated to
+        uint vote;   // index of the voted proposal
+    }
+
+    // This is a type for a single proposal.
+    struct Proposal {
+        bytes32 name;   // short name (up to 32 bytes)
+        uint voteCount; // number of accumulated votes
+    }
+
+    address public chairperson;
+
+    // This declares a state variable that
+    // stores a `Voter` struct for each possible address.
+    mapping(address => Voter) public voters;
+
+    // A dynamically-sized array of `Proposal` structs.
+    Proposal[] public proposals;
+
+    /// Create a new ballot to choose one of `proposalNames`.
+    constructor(bytes32[] proposalNames) public {
+        chairperson = msg.sender;
+        voters[chairperson].weight = 1;
+
+        // For each of the provided proposal names,
+        // create a new proposal object and add it
+        // to the end of the array.
+        for (uint i = 0; i < proposalNames.length; i++) {
+            // `Proposal({...})` creates a temporary
+            // Proposal object and `proposals.push(...)`
+            // appends it to the end of `proposals`.
+            proposals.push(Proposal({
+                name: proposalNames[i],
+                voteCount: 0
+            }));
+        }
+    }
+
+    // Give `voter` the right to vote on this ballot.
+    // May only be called by `chairperson`.
+    function giveRightToVote(address voter) public {
+        // If the first argument of `require` evaluates
+        // to `false`, execution terminates and all
+        // changes to the state and to Ether balances
+        // are reverted.
+        // This used to consume all gas in old EVM versions, but
+        // not anymore.
+        // It is often a good idea to use `require` to check if
+        // functions are called correctly.
+        // As a second argument, you can also provide an
+        // explanation about what went wrong.
+        require(
+            msg.sender == chairperson,
+            "Only chairperson can give right to vote."
+        );
+        require(
+            !voters[voter].voted,
+            "The voter already voted."
+        );
+        require(voters[voter].weight == 0);
+        voters[voter].weight = 1;
+    }
+
+    /// Delegate your vote to the voter `to`.
+    function delegate(address to) public {
+        // assigns reference
+        Voter storage sender = voters[msg.sender];
+        require(!sender.voted, "You already voted.");
+
+        require(to != msg.sender, "Self-delegation is disallowed.");
+
+        // Forward the delegation as long as
+        // `to` also delegated.
+        // In general, such loops are very dangerous,
+        // because if they run too long, they might
+        // need more gas than is available in a block.
+        // In this case, the delegation will not be executed,
+        // but in other situations, such loops might
+        // cause a contract to get "stuck" completely.
+        while (voters[to].delegate != address(0)) {
+            to = voters[to].delegate;
+
+            // We found a loop in the delegation, not allowed.
+            require(to != msg.sender, "Found loop in delegation.");
+        }
+
+        // Since `sender` is a reference, this
+        // modifies `voters[msg.sender].voted`
+        sender.voted = true;
+        sender.delegate = to;
+        Voter storage delegate_ = voters[to];
+        if (delegate_.voted) {
+            // If the delegate already voted,
+            // directly add to the number of votes
+            proposals[delegate_.vote].voteCount += sender.weight;
+        } else {
+            // If the delegate did not vote yet,
+            // add to her weight.
+            delegate_.weight += sender.weight;
+        }
+    }
+
+    /// Give your vote (including votes delegated to you)
+    /// to proposal `proposals[proposal].name`.
+    function vote(uint proposal) public {
+        Voter storage sender = voters[msg.sender];
+        require(!sender.voted, "Already voted.");
+        sender.voted = true;
+        sender.vote = proposal;
+
+        // If `proposal` is out of the range of the array,
+        // this will throw automatically and revert all
+        // changes.
+        proposals[proposal].voteCount += sender.weight;
+    }
+
+    /// @dev Computes the winning proposal taking all
+    /// previous votes into account.
+    function winningProposal() public view
+            returns (uint winningProposal_)
+    {
+        uint winningVoteCount = 0;
+        for (uint p = 0; p < proposals.length; p++) {
+            if (proposals[p].voteCount > winningVoteCount) {
+                winningVoteCount = proposals[p].voteCount;
+                winningProposal_ = p;
+            }
+        }
+    }
+
+    // Calls winningProposal() function to get the index
+    // of the winner contained in the proposals array and then
+    // returns the name of the winner
+    function winnerName() public view
+            returns (bytes32 winnerName_)
+    {
+        winnerName_ = proposals[winningProposal()].name;
+    }
+}
+#+END_SRC
+** Walking through the Tutorial
+*** Tutorial Link
+[[https://www.ethereum.org/token][Create your own crypto-currency]]
+*** Code Written Following the Tutorial
+#+BEGIN_SRC java
+
+#+END_SRC
+
+**** Constant Floating Price
+Reference: [[https://github.com/ethereum/wiki/wiki/Standardized_Contract_APIs#data-feeds][standard data feed]]
+
+**** Buying and Selling
+Notice that this will not create new tokens but change the balance the contract owns. The contract can hold both its own tokens and Ether and the owner of the contract, while it can set prices or in some cases create new tokens (if applicable) it cannot touch the bank's tokens or Ether. The only way this contract can move funds is by selling and buying them.
+
+#+BEGIN_SRC java
+function buy() public payable returns (uint amount){
+        amount = msg.value / buyPrice;                    // calculates the amount
+        transfer(msg.sender, amount);
+        return amount;
+}
+
+function sell(uint amount) public returns (uint revenue){
+        require(balanceOf[msg.sender] >= amount);         // checks if the sender has enough to sell
+        balanceOf[this] += amount;                        // adds the amount to owner's balance
+        balanceOf[msg.sender] -= amount;                  // subtracts the amount from seller's balance
+        revenue = amount * sellPrice;
+        msg.sender.transfer(revenue);                     // sends ether to the seller: it's important to do this last to prevent recursion attacks
+        emit Transfer(msg.sender, this, amount);               // executes an event reflecting on the change
+        return revenue;                                   // ends function and returns
+}
+#+END_SRC
+
+**** Note!
+When creating the contract, send enough Ether to it so that it can buy back all the tokens on the market otherwise your contract will be insolvent and your users won't be able to sell their tokens.
+
+合约实际上就是代币系统本身。Bitcoin就是一种所有参与的节点所共同承认的Contract。创建一个这样的Contract首先需要决定用多少的ETHER币去兑换成我们自己创建的代币。自己创建的代币的各种参数和行为逻辑都是由创建者通过Solidity程序来决定。
+
+** CrowdSale
+https://www.ethereum.org/crowdsale
