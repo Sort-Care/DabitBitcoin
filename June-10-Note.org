@@ -1,7 +1,10 @@
 * Third Party API
 ** BlockChain Wallet API
-https://blockchain.info/api/blockchain_wallet_api
-Need a running website to request an API key.
+*** My Note
+From the API description, it seems like a Wallet can be created. And the response will be a Wallet ID, an address for sending and receiving funds and a label attached to that address.
+*** API Link
+ https://blockchain.info/api/blockchain_wallet_api
+ Need a running website to request an API key.
 *** Create Wallet API
 Create blockchain wallet programmatically!
 *URL*: http://localhost:3000/api/v2/create
@@ -13,6 +16,17 @@ Create blockchain wallet programmatically!
 - $label A label to set for the first address in the wallet. Alphanumeric only. (Optional)
 - $email An email to associate with the new wallet i.e. the email address of the user you are creating this wallet on behalf of. (Optional)
 Please create an API code here including permissions to "Create Wallets".
+
+Response will be like:
+#+BEGIN_SRC json
+{
+    "guid": "4b8cd8e9-9480-44cc-b7f2-527e98ee3287",
+    "address": "12AaMuRnzw6vW6s2KPRAGeX53meTf8JbZS",
+    "label": "Main address"
+}
+#+END_SRC
+*** Receive Payments API v2
+[[https://blockchain.info/api/api_receive][Blockchain Payments API]]
 
 
 
