@@ -12,6 +12,8 @@ Ethereum blockchain focuses on running the programming code of any decentralized
 Ether, a type of crypto token that fuels the network. Beyond a tradeable cryptocurrency, Ether is also used by application developers to pay for transaction fees and services on the Ethereum network.
 
 Smart contract is just a phrase used to describe computer code that can facilitate the exchange of money, content, property, shares, or anything of value
+
+*Answer: NO!* Actually it is accessible without installing a ethereum node, refer to [[https://ethereum.stackexchange.com/questions/2054/is-it-possible-to-call-ethereum-api-from-a-software-application-without-running][Is it possible to call Ethereum API from a Software Application without running an ETH node?]] for more details.
 * Geth
 Maybe we can run Geth on a server and write our own APIs through which we can have access to a Ethereum system without installing anything on client end.
 https://ethereum.gitbooks.io/frontier-guide/content/getting_a_client.html
@@ -21,9 +23,7 @@ curl https://install.meteor.com/ | sh
 #+END_SRC
 * JavaScript API
 https://github.com/ethereum/wiki/wiki/JavaScript-API
-
-
-* Ethereum Node on AWS
+* Deploy a Ethereum Node on AWS
 https://medium.com/mercuryprotocol/how-to-run-an-ethereum-node-on-aws-a8774ed3acf6
 
 * Useful Blogs(Linux)
@@ -67,7 +67,7 @@ Mist provides a portal into the world of decentralized blockchain applications.
 An interesting history of Ethereum: A group developed a DAO named "the DAO" on Ethereum which raised 150m dollars. Then a hacker got to take the advantage of a flaw in their system and stole 50 million dollars. After that, people divided into two sides: the majority of the community decided to perform a hard-fork to revert all the damages and retrieve the DAO investors money. While the rest of them were strongly against this action because it hurt the core ideas of decentralization and set a dangerous precedent. In the end, two parallel blockchains now exist. *Ethereum Classic* is for those who disagree with the hard-fork. *Ethereum* is the one a hard-fork was performed.
 
 ** My Question
-Does a user need to pick one fork among them? Does that means if a user gets his/her money back depends fully on which fork he/she picks?
+Does a user need to pick one fork among them? Does that means if a user gets his/her money back depends fully on which fork he/she picks? 
 
 * Most significant companies will run business processes on their private blockchains
 
