@@ -676,3 +676,7 @@ Instead we are going to do this the decentralized way and just create a token to
 
 Also, generally those who are funding can't have any say on how the money is spent after the funds are raised and mismanagement often causes projects never to deliver anything at all. 
 
+** After deploying, is it possible to read the code?
+
+** Geth
+

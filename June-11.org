@@ -1,0 +1,6 @@
+* Is Ethereum a Closed System?
+https://blockgeeks.com/guides/ethereum/
+
+Bitcoin and Ethereum differ substantially in purpose and capability.
+* Geth
+Maybe we can run Geth on a server and write our own APIs through which we can have access to a Ethereum system without installing anything on client end.
