@@ -62,3 +62,18 @@ There are many ways you can plug into the Ethereum network, one of the easiest w
 [[https://github.com/ethereum/mist][Mist Browser]]
 
 Mist provides a portal into the world of decentralized blockchain applications.
+
+* Decentralized Autonomous Organizations(DAO)
+An interesting history of Ethereum: A group developed a DAO named "the DAO" on Ethereum which raised 150m dollars. Then a hacker got to take the advantage of a flaw in their system and stole 50 million dollars. After that, people divided into two sides: the majority of the community decided to perform a hard-fork to revert all the damages and retrieve the DAO investors money. While the rest of them were strongly against this action because it hurt the core ideas of decentralization and set a dangerous precedent. In the end, two parallel blockchains now exist. *Ethereum Classic* is for those who disagree with the hard-fork. *Ethereum* is the one a hard-fork was performed.
+
+** My Question
+Does a user need to pick one fork among them? Does that means if a user gets his/her money back depends fully on which fork he/she picks?
+
+* Most significant companies will run business processes on their private blockchains
+
+** Private Blockchain
+
+** Consortia Blockchains
+
+** Business Use of Public Blockchains
+
