@@ -2,5 +2,15 @@
 https://blockgeeks.com/guides/ethereum/
 
 Bitcoin and Ethereum differ substantially in purpose and capability.
+
+Bitcoin offers one particular application of blockchain technology, a peer to peer electronic cash system that enables online Bitcoin payments.
+
+Bitcoin blockchain is used to track ownership of digital currency (bitcoins)
+
+Ethereum blockchain focuses on running the programming code of any decentralized application.
+
+Ether, a type of crypto token that fuels the network. Beyond a tradeable cryptocurrency, Ether is also used by application developers to pay for transaction fees and services on the Ethereum network.
+
+Smart contract is just a phrase used to describe computer code that can facilitate the exchange of money, content, property, shares, or anything of value
 * Geth
 Maybe we can run Geth on a server and write our own APIs through which we can have access to a Ethereum system without installing anything on client end.
