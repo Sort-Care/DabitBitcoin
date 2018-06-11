@@ -14,3 +14,51 @@ Ether, a type of crypto token that fuels the network. Beyond a tradeable cryptoc
 Smart contract is just a phrase used to describe computer code that can facilitate the exchange of money, content, property, shares, or anything of value
 * Geth
 Maybe we can run Geth on a server and write our own APIs through which we can have access to a Ethereum system without installing anything on client end.
+https://ethereum.gitbooks.io/frontier-guide/content/getting_a_client.html
+** Install Geth
+#+BEGIN_SRC bash
+curl https://install.meteor.com/ | sh
+#+END_SRC
+* JavaScript API
+https://github.com/ethereum/wiki/wiki/JavaScript-API
+
+
+* Ethereum Node on AWS
+https://medium.com/mercuryprotocol/how-to-run-an-ethereum-node-on-aws-a8774ed3acf6
+
+* Useful Blogs(Linux)
+https://www.codeooze.com/categories/blockchain/
+
+* What is Mist?
+[[https://github.com/ethereum/mist][Mist Github]]
+
+* Remix
+https://remix.ethereum.org/#optimize=false&version=soljson-v0.4.24+commit.e67f0147.js
+
+* Ethereum Explained
+Ethereum’s core innovation, the Ethereum Virtual Machine (EVM) is a Turing complete software that runs on the Ethereum network. It enables anyone to run any program, regardless of the programming language given enough time and memory. The Ethereum Virtual Machine makes the process of creating blockchain applications much easier and efficient than ever before. Instead of having to build an entirely original blockchain for each new application, Ethereum enables the development of potentially thousands of different applications all on one platform.
+
+* Update Smart Contract
+
+[[https://ethereum.stackexchange.com/questions/2404/upgradeable-smart-contracts][Upgrade Smart Contract]]
+
+Once a contract is in the blockchain, it is final and cannot be changed. Certain parameters, of course, can be changed if they are allowed to change via the original code.
+
+One method of updating contracts is to use a versioning system. For example, you could have an entryway contract that just forwards all calls to the most recent version of the contract, as defined by an updatable address parameter. You could also use a name registry, and update that to point to the most recent contract version.
+
+Another method is to put your logic code in a library, then use the CALLCODE feature, via libraries in Solidity, to call the code located at a specified, updatable, address. This way, user data persists between versions. This has the limitation that the ABI of the logic contract must stay the same over time.
+
+[[https://ethereum.stackexchange.com/questions/4516/how-to-edit-a-contract-that-has-already-been-deployed][edit a smart contract that has been deployed]]
+
+Summary from that link
+
+The short answer is that contract code is immutable so you can't update without destroying the contract and deploying a new one in which case any state will be lost and users, other contracts or user interfaces will need to interact with another contract.
+
+However there are various patterns which allow you to point to a new version and optionally keep state for example:
+
+* I want to develop an app. How do I access Ethereum?
+There are many ways you can plug into the Ethereum network, one of the easiest ways is to use its native Mist browser. Mist provides a user-friendly interface & digital wallet for users to trade & store Ether as well as write, manage, deploy and use smart contracts.
+
+[[https://github.com/ethereum/mist][Mist Browser]]
+
+Mist provides a portal into the world of decentralized blockchain applications.
