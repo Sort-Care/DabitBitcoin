@@ -16,9 +16,26 @@ I requested some test net KTHE coins [[https://gitter.im/kovan-testnet/faucet][h
 The address type is a 160-bit value that does not allow any arithmetic operations. It is suitable for storing addresses of contracts or keypairs belonging to external persons. 
 
 * Tutorial!!
+Part 1
+
+https://www.youtube.com/watch?v=w9WLo33KfCY
+
+Part 2
+
 https://www.youtube.com/watch?v=TC-bDQZbXd0
 
+Ethereum In Depth:
+https://www.youtube.com/watch?v=m1ekLcfz65s
+
 It seems like the reason Ethereum is giving the warning "It seems the transaction will fail" because of some features of a smart contract are not satisfied, meaning that there is something wrong with our code.
+
+Pay to change contract status.
+
+** Swarm
+http://swarm-guide.readthedocs.io/en/latest/introduction.html
+
+** Whisper
+https://github.com/ethereum/wiki/wiki/Whisper
 
 * Appendix(Saved Code)
 #+BEGIN_SRC java
