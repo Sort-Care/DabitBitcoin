@@ -28,6 +28,23 @@ It seems like the reason Ethereum is giving the warning "It seems the transactio
 
 Pay to change contract status.
 
+** Run Geth
+After install it, run
+#+BEGIN_SRC bash
+geth --rpc
+#+END_SRC
+Then you will get a url to which you can send request for data.
+
+Use web3 and provide proper httpProvider in web3. 
+
+#+BEGIN_SRC js
+var Web3 = require('web3');
+var web3 = new Web3();
+web3.setProvider(new web3.providers.HttpProvider("http://{ETH_HOST}:{ETH_PORT}"));
+#+END_SRC
+
+
+
 ** Swarm
 Swarm is a distributed storage platform and content distribution service, a native base layer service of the ethereum web 3 stack.
 
