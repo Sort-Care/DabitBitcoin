@@ -2,8 +2,8 @@ pragma solidity ^0.4.16;
 
 contract owned {
     address public owner;
-    
-    constructor() public {
+
+    function owned() public payable {
         owner = msg.sender;
     }
 
@@ -19,7 +19,7 @@ contract owned {
 
 interface tokenRecipient { function receiveApproval(address _from, uint256 _value, address _token, bytes _extraData) external; }
 
-contract TokenERC20 {
+contract VicTokenERC20 {
     // Public variables of the token
     string public name;
     string public symbol;
@@ -42,11 +42,11 @@ contract TokenERC20 {
      *
      * Initializes contract with initial supply tokens to the creator of the contract
      */
-    constructor(
+    function VicTokenERC20(
         uint256 initialSupply,
         string tokenName,
         string tokenSymbol
-    ) public {
+    ) public payable {
         totalSupply = initialSupply * 10 ** uint256(decimals);  // Update total supply with the decimal amount
         balanceOf[msg.sender] = totalSupply;                // Give the creator all initial tokens
         name = tokenName;                                   // Set the name for display purposes
@@ -174,7 +174,7 @@ contract TokenERC20 {
 /*       ADVANCED TOKEN STARTS HERE       */
 /******************************************/
 
-contract MyAdvancedToken is owned, TokenERC20 {
+contract VicAdvancedToken is owned, VicTokenERC20 {
 
     uint256 public sellPrice;
     uint256 public buyPrice;
@@ -185,11 +185,11 @@ contract MyAdvancedToken is owned, TokenERC20 {
     event FrozenFunds(address target, bool frozen);
 
     /* Initializes contract with initial supply tokens to the creator of the contract */
-    constructor(
+    function VicAdvancedToken(
         uint256 initialSupply,
         string tokenName,
         string tokenSymbol
-    ) TokenERC20(initialSupply, tokenName, tokenSymbol) public {}
+    ) VicTokenERC20(initialSupply, tokenName, tokenSymbol) public payable {}
 
     /* Internal transfer, only can be called by this contract */
     function _transfer(address _from, address _to, uint _value) internal {
@@ -244,4 +244,6 @@ contract MyAdvancedToken is owned, TokenERC20 {
         msg.sender.transfer(amount * sellPrice);          // sends ether to the seller. It's important to do this last to avoid recursion attacks
     }
 }
+
+
 

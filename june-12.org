@@ -8,35 +8,44 @@
 *** Tokens for Team
 For yourself or people involved
 
-** Test Net
+* Test Net
 
 *** Kovan Test Net
 I requested some test net KTHE coins [[https://gitter.im/kovan-testnet/faucet][here]]. Waiting for response. After 1 min, I got 3 testnet ETH!
 
 The address type is a 160-bit value that does not allow any arithmetic operations. It is suitable for storing addresses of contracts or keypairs belonging to external persons. 
 
+*** Rinkeby Testnet
+I entered Rinkeby Testnet within Ethereum Wallet, and pasted the code in the appendix into the create contract field. Also I requested some testnet ethe coins in [[https://faucet.rinkeby.io/][Rinkeby Faucet]]. It worked in this case and the contract was created. However, it still doesn't work in the main net. Not quite sure why. (Actually, my hypothesis is that in mainnet, more checks are performed to make sure all things will go well in the very curcial mainnet. Any flaws in you solidity code will make ethereum emit the warning.)
 * Tutorial!!
-Part 1
+Part 1: https://www.youtube.com/watch?v=w9WLo33KfCY
 
-https://www.youtube.com/watch?v=w9WLo33KfCY
+Part 2: https://www.youtube.com/watch?v=TC-bDQZbXd0
 
-Part 2
-
-https://www.youtube.com/watch?v=TC-bDQZbXd0
-
-Ethereum In Depth:
-https://www.youtube.com/watch?v=m1ekLcfz65s
+Ethereum In Depth: https://www.youtube.com/watch?v=m1ekLcfz65s
 
 It seems like the reason Ethereum is giving the warning "It seems the transaction will fail" because of some features of a smart contract are not satisfied, meaning that there is something wrong with our code.
 
 Pay to change contract status.
 
 ** Swarm
+Swarm is a distributed storage platform and content distribution service, a native base layer service of the ethereum web 3 stack.
+
 http://swarm-guide.readthedocs.io/en/latest/introduction.html
 
 ** Whisper
 https://github.com/ethereum/wiki/wiki/Whisper
 
+* Ethereum Doc
+[[http://www.ethdocs.org/en/latest/index.html][Ethereum Docs]]
+
+* Summary
+Deploy Geth on a server, write a server side program that can send requests it get to Geth node. For client side, nothing other than a web browser is needed.
+
+** Parity?
+[[https://wiki.parity.io/][Parity Wiki]]
+
+This is also founded by the creator of Ethereum, and it is said to be "The fastest and most secure way of interacting with the Ethereum blockchain".
 * Appendix(Saved Code)
 #+BEGIN_SRC java
 pragma solidity ^0.4.16;
@@ -290,3 +299,6 @@ contract VicAdvancedToken is owned, VicTokenERC20 {
 
 
 #+END_SRC
+
+
+[[https://www.youtube.com/watch?v=WSN5BaCzsbo][Vitalik Talk]]
