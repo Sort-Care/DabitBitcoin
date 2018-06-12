@@ -1,0 +1,2 @@
+* Solidity
+contract-oriented, high-level language for implementing smart contracts.

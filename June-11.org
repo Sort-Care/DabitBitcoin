@@ -1,3 +1,7 @@
+* Experiement of Creating a Smart Contract in Ethereum
+This morning, I got a transaction without warnings, but I didn't confirm it. I went back and tried 
+
+Probably related blog: [[http://www.itamarweiss.com/personal/2018/01/30/ethereum-smart-contract-development.html][Ethereum smart contract development]]
 * Is Ethereum a Closed System?
 https://blockgeeks.com/guides/ethereum/
 
@@ -70,9 +74,8 @@ An interesting history of Ethereum: A group developed a DAO named "the DAO" on E
 Does a user need to pick one fork among them? Does that means if a user gets his/her money back depends fully on which fork he/she picks? 
 
 * Most significant companies will run business processes on their private blockchains
-
 ** Private Blockchain
-
+   
 ** Consortia Blockchains
 
 ** Business Use of Public Blockchains
