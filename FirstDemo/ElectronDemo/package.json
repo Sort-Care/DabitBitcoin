@@ -1,0 +1,15 @@
+{
+  "name": "electrondemo",
+  "version": "1.0.0",
+  "description": "Ethereum Shopping",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "author": "Haoyu Ji",
+  "license": "MIT",
+  "dependencies": {
+    "electron": "^2.0.2",
+    "web3": "^1.0.0-beta.34"
+  }
+}

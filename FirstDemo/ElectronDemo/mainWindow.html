@@ -1,0 +1,76 @@
+<!doctype html>
+<html>
+  <head>
+	<title>Ethereum Trading</title>
+	<meta charset="utf-8" />
+  </head>
+  <body>
+	<h1>Ethereum Trading System</h1>
+	<div>
+	  <h3>Seller's Address</h3>
+	</div>
+	<div id ="seller_ether_add"></div>
+
+	<div>
+      <h3>Seller's Account Balance</h3>
+	  <button id="get_balance">Update Balance</button>
+	</div>
+	<div id ="seller_balance"></div>
+
+	<div>
+	  <h3>Seller's Secret Message</h3>
+	</div>
+	<div id="secret_msg"></div>
+	<div id="paid_tag" value ="false" style="visibility:hidden"></div>
+
+	<script>
+	 const electron = require('electron');
+	 const {ipcRenderer} = electron;
+	 var Web3 = require('web3');
+
+	 if (typeof web3 !== 'undefined') {
+	   web3 = new Web3(web3.currentProvider);
+	 } else {
+	   // set the provider you want from Web3.providers
+	   web3 = new Web3(new Web3.providers.HttpProvider("http://47.75.72.112:8545"));
+	 }
+
+	 const seller_address = document.querySelector('#seller_ether_add');
+	 const secret_msg = document.querySelector('#secret_msg');
+
+	 //catch the value
+	 ipcRenderer.on('sellerAddress', function(e, item){
+	   seller_address.innerHTML = item;
+	 });
+
+	 ipcRenderer.on('secretMsg', function(e, item){
+	   const paid_tag = document.querySelector('#paid_tag');
+	   if(paid_tag.value == 'true'){
+		 secret_msg.innerHTML = item;
+	   }
+	   secret_msg.innerHTML = '********';
+	 });
+
+
+	 document.querySelector('#get_balance').onclick = function(){getAccountBalance()};
+
+	 const get_eth_balance = async (web3, account) => {
+
+	   const balance = web3.eth.getBalance(account).then(balance => {console.log(balance)});
+
+	   return balance;
+	 };
+
+	 
+	 function getAccountBalance(){
+	   const address = seller_address.innerHTML;
+	   const balance = web3.eth.getBalance(address, function(error, result){
+		 document.querySelector('#seller_balance').innerHTML = result;
+	   });
+
+	   const res = web3.fromWei(web3.eth.getBalance('0x4eC66e6433724dc8648F66A84780DFC42af4c349'),'ether').toString(10);
+	   console.log(res);
+	 }
+	</script>
+  </body>
+</html>

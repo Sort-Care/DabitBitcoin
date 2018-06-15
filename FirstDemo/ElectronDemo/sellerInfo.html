@@ -1,0 +1,41 @@
+<!doctype html>
+<html>
+  <head>
+	<title>Seller Info</title>
+	<meta charset="utf-8" />
+  </head>
+  <body>
+	<form>
+	  <div>
+		<label>Enter Seller Ethereum Address:</label><br/>
+		<input type="text" id="seller_address" autofocus/> 
+	  </div>
+
+	  <div>
+		<label>Seller Secret Message</label><br/>
+		<input type="text" id="secret_msg"/>
+	  </div>
+
+	  <button type ="submit">Update Seller Info</button>
+	</form>
+
+
+	<script>
+	 const electron = require('electron');
+	 const {ipcRenderer} = electron;
+
+	 const form = document.querySelector('form');
+	 form.addEventListener('submit', submitForm);
+
+	 function submitForm(e){
+	   e.preventDefault();
+	   const sellerAdd = document.querySelector('#seller_address').value;
+	   const sellerMsg = document.querySelector('#secret_msg').value;
+
+	   ipcRenderer.send('sellerAddress', sellerAdd);
+	   ipcRenderer.send('secretMsg', sellerMsg);
+	 }
+	 
+	</script>
+  </body>
+</html>

@@ -1,0 +1,15 @@
+* Using Aliyun
+Connect to the server with ssh
+#+BEGIN_SRC bash
+ssh -i "DabitCoin.pem" dabit@47.75.72.112
+#+END_SRC
+
+The keystore file is available here:
+
+
+#+BEGIN_SRC bash
+geth console -rpc -rpcaddr "0.0.0.0" --rpccorsdomain "*"
+#+END_SRC
+
+
+* Using too much disk space! Trying Etherscan!
