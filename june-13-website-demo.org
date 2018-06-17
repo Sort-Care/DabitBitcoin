@@ -10,11 +10,15 @@ To achieve this, at least two accounts are needed:
 
 For a demo usage, all of these users are going to be hard coded into the webpage.
 
-** For simplicity Using Django
-1. Create Virtual Env
-2. Install Django and mysqlclient with pip
 
-If you are getting this error: 
-> Command "python setup.py egg_info" failed with error code 1
-Refer to [[https://stackoverflow.com/questions/43740481/python-setup-py-egg-info-mysqlclient][Here]] for a solution
+交易量即挖矿
+https://support.fcoin.com/hc/en-us/articles/360005046194-Additional-Comments-Regarding-FCoin-s-Trans-Fee-Mining-Mechanism
+
+手续费收入转化FT配发给矿工(有实际交易的用户)
+
+0.1%
+
+模仿和超越
+
+两周左右
 

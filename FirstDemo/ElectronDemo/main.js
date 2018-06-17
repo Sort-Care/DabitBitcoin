@@ -4,6 +4,9 @@ const path = require('path');
 
 var Web3 = require('web3');
 var web3 = new Web3();
+//npm install web3
+
+
 
 
 // pull something out of electron
@@ -153,3 +156,6 @@ const buyer_account = web3.eth.accounts.decrypt(buyer_keystore, 'SyFs86521216');
 const seller_keystore = "{\"address\":\"b9a5f090af53004d9c8183e6cbc8acaca5f297f0\",\"crypto\":{\"cipher\":\"aes-128-ctr\",\"ciphertext\":\"13e56bda9d1d9b931f441060a95b066567fbfb143d55bb4537e9650ec1f37a27\",\"cipherparams\":{\"iv\":\"d60e9ec023b306f0993c3eda3899b9a6\"},\"kdf\":\"scrypt\",\"kdfparams\":{\"dklen\":32,\"n\":262144,\"p\":1,\"r\":8,\"salt\":\"ce6fefd2dc485e0b6d0f5243f5d80eb9213906cf303b7e14b01e07d140a5e974\"},\"mac\":\"fd4e9331182949adfc0fc6f5d01d58eef42db1c3ced1ca67a03aca1aba0aa796\"},\"id\":\"fc948389-14d3-42cb-a923-c9b8d7884384\",\"version\":3}";
 
 const seller_account = web3.eth.accounts.decrypt(seller_keystore, 'SyFs86521216');
+
+
+

@@ -1,0 +1,34 @@
+* Multilevel Marketing
+** Is it Legal?
+[[https://www.economist.com/business/2013/01/05/the-bottom-line][The Bottom Line]]
+[[http://www.kellogg.northwestern.edu/faculty/coughlan/htm/PersonalPage_Files/Papers/Assessing%20an%20MLM%20Business%20HLF%20as%20a%20Legit%20MLM%207-30-2012%20FINAL.pdf][Herbalife as a Legitimate MLM]]
+
+* Variation of Plans
+[[https://infinitemlmsoftware.com/mlm-plans.php][MLM Plans]]
+
+** Binary MLM Plan
+
+** Matrix MLM Plan
+Fixed Width, encouraging hire more members in the downline.
+
+** Unilevel
+Unlimited width
+
+** Generation Plan
+ if you pay 10% of your very first generation, it will only be 6% on the second, 4% on the third generation, and 2% on the fourth.
+
+** Monoline MLM Plan
+Every member automatically goes down once new member join. 
+
+** MLM Spillover
+MLM spillover consists of the fact that a person in the upline decides to place a recruited person in the downline.
+
+Profit grows as the downline person performs the operations. Spillover means a person spills over to the person in the downline. When we choose to place our new downline under a person in our team it would be an effective downline retention move that we can use
+
+
+
+* My Question
+If we are going to pay the transaction fee back, what should we use to reward new recruiment?
+
+- Kucoin use part of users' transaction fee to pay their upliners.
+- 

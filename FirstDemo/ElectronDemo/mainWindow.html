@@ -55,11 +55,12 @@
 	 document.querySelector('#get_balance').onclick = function(){getAccountBalance()};
 
 	 const get_eth_balance = async (web3, account) => {
-
+	   //opti
 	   const balance = web3.eth.getBalance(account).then(balance => {console.log(balance)});
 
 	   return balance;
 	 };
+
 
 	 
 	 function getAccountBalance(){
