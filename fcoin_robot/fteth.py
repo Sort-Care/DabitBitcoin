@@ -73,7 +73,7 @@ class Fteth():
 
                     if amount > 5:
                         # but some FT
-                        data = self.fcoin.sell(self.symbol, price, amount)
+                        data = self.fcoin.buy(self.symbol, price, amount)
                         # if the trade is success
                         if data:
                             self.ft_sxf += amount * 0.001
