@@ -25,6 +25,10 @@ MLM spillover consists of the fact that a person in the upline decides to place 
 
 Profit grows as the downline person performs the operations. Spillover means a person spills over to the person in the downline. When we choose to place our new downline under a person in our team it would be an effective downline retention move that we can use
 
+** Final Choice
+Limit Width? or Height?
+
+
 
 
 * My Question
@@ -32,3 +36,38 @@ If we are going to pay the transaction fee back, what should we use to reward ne
 
 - Kucoin use part of users' transaction fee to pay their upliners.
 - 
+
+
+* FCOIN API
+api.key:
+
+71552b312b8f4217943e81a4de840f46
+
+api.secret:
+
+0570c98d38c4466ea4219d477a579f7c
+
+
+* Tomorrow
+** Model
+Cryptocurrencies are mainly platforms/utilities built with an agenda of Generating value and assigning that value to a token to have transparency within the economy.
+*** 
+
+
+** Robot
+
+
+** 180%
+
+* 交易即挖矿
+本质: 鼓励交易、提升自发代币的持有量
+
+* FCOIN Automatic Program
+[[https://github.com/DeepAiLearner/fcoin_python_sdk.git][FCOIN_python_sdk]]
+
+* OKEx
+
+** 投票上币
+
+
+

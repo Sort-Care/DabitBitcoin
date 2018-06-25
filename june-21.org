@@ -1,0 +1,53 @@
+* Telegram
+API: crypto-bot, 辅助机器人
+加入聊天群，有人输入特定关键字，例如:“p btc"， 机器人给出相关信息
+
+微股力
+
+** 爬虫，把全网与数字货币有关的群找出来
+TL Language: https://core.telegram.org/mtproto/TL
+
+解决方案:
+1. 先用Scrapy，在各类网站上爬下满足格式的url
+
+> https://t.me/joinchat/...
+or
+> https://t.me/...
+
+2. 继续使用爬虫，进入到找到的所有网页，寻找字段
+#+BEGIN_SRC html
+<div class = "tgme_page_title">...</div>
+#+END_SRC
+
+3. 分析该群名称是否与数字货币相关
+
+
+
+
+** Bots
+Core: Special Accounts
+*** Ways of Interacting
+1. Opening a chat with a bot or adding it to a group chat
+2. Inline Result
+
+Messages, commands and requests sent by users are passed to the software running on your servers. Our intermediary server handles all encryption and communication with the Telegram API for you.
+
+*** Privacy
+- Messages that start with a slash ‘/’ (see Commands above)
+- Replies to the bot's own messages
+- Service messages (people added or removed from the group, etc.)
+- Messages from channels where it's a member
+
+** A Telegram Bot Wrapper
+https://github.com/python-telegram-bot/python-telegram-bot
+*** Token
+Get a token from the BotFather
+
+** Dabit_bot API Token
+605033068:AAFUxxRHekzCfP8YyUaHJmQR9THp2j22HRk
+
+** About running it
+First, we need to keep the server running for that robot to work.
+
+
+用用户账户拉取所在群组的消息

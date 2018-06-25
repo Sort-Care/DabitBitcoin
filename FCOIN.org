@@ -16,3 +16,10 @@ GTT, GTC, FOK, IOC
 
 * Filtering Digital Assets
 
+* FT Issuance
+51% of the FT will be rewarded to the community by the Trans-Fee Mining - "Community Reward"
+
+49% of the FTs are held by private capital, strategic partners, founding team and FCoin Fund. - "Previously Issued"
+
+** Blogs
+http://www.sohu.com/a/235408664_115060
