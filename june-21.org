@@ -20,6 +20,10 @@ or
 #+END_SRC
 
 3. 分析该群名称是否与数字货币相关
+可能需要运用到机器学习模型: 相关度模型
+
+*** Xpath
+
 
 
 
@@ -51,3 +55,99 @@ First, we need to keep the server running for that robot to work.
 
 
 用用户账户拉取所在群组的消息
+
+
+* 可视化工具
+画出类似Fcoin的模型
+
+
+
+
+* Telegram 用户入口爬取群消息
+** Api_id and Api_hash
+257205
+c3e52f9fdb96bee835562676e5c5dfc9
+
+
+** Telegram Message Dump Tool
+https://github.com/Kosat/telegram-messages-dump
+
+doesn't quite work now due to Telethon
+
+** Telethon Doc
+http://telethon.readthedocs.io/en/stable/
+
+
+* Prediction
+\[
+s_1, s_2, s_3, \ldots
+\]
+
+* 类似 IPFS
+[[][So You want to decentralize your website]]
+file coin
+
+IPFS makes it possible to distribute high volumes of data with high efficiency
+
+贡献了资源: 取得token
+
+1. 语音档案: 付费取得
+2. 处理交易数据资料，realtime资料，更新: 能否作为中继资料源
+
+** How it Works
+1. Each file and all of the blocks within it are given: *a unique fingerprint* called a *cryptographic hash*
+2. Remove Duplicates based on version history
+3. Storing only content a node is interested in + some indexing information
+4. Asking the network to find nodes storing the content behind a unique hash
+
+
+** File Objects
+*** Object Model
+1. block
+2. list
+3. tree
+4. commit
+
+
+** IPFS + BLOCKCHAIN
+IPFS and the Blockchain are a perfect match! You can address large amounts of data with IPFS, and place the immutable, permanent IPFS links into a blockchain transaction. This timestamps and secures your content, without having to put the data on the chain itself.
+
+
+** Deleting
+*** Remove
+> ipfs files rm
+
+*** Hosting Your File on IPFS Forever
+https://medium.com/@merunasgrincalaitis/how-to-host-your-ipfs-files-online-forever-f0c56b9b5398
+If you add a file on your own IPFS node without pinning it, it will be garbage collected after 24 hours.
+
+Instead, if you pin it and keep your server running, it will exist forever.
+
+** Costs
+
+
+** CodeMentor Business Model
+
+A business model (BM) can be defined as “a conceptual tool that contains a set of elements and
+their relationships and allows expressing the business logic of a specific firm”
+
+
+Asked to 
+被市场要求
+CodeMentorX: 1v1 ---> 咨询
+
+quora
+
+stack overflow
+
+码市
+
+
+|      | 相亲     | 招聘        |
+|------+----------+-------------|
+| 以往 | 找媒婆   | 找猎头      |
+| 现在 | 相亲网站 | CodeMentorX |
+
+
+* Appendix
+[[https://medium.com/@mycoralhealth/code-your-own-blockchain-in-less-than-200-lines-of-go-e296282bcffc][Implement Your Blockchain In Go]]
