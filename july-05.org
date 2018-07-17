@@ -1,0 +1,65 @@
+* Filecoin
+*Add FileCoin Token and Blockchain elements on top of IPFS*
+
+[[https://coincentral.com/filecoin-beginners-guide-largest-ever-ico/][What is Filecoin]]
+
+1. Storage Nodes
+Rent out extra hard drive space on their computer.
+
+Incentivize mid-sized storage nodes
+
+
+2. Retrieval Nodes
+
+Retrieval nodes are unique to Filecoin’s system. They need to be located close to the storage nodes on the network. However, retrieval nodes also need high bandwidth and low latency. They get paid when they are the fastest to locate and retrieve a file for a user.
+
+Instead anybody with available storage can join in and become a FileCoin storage provider. In Blockchain terms these are the “miners” of FileCoin.
+
+The big advantage for FileCoin’s end users is that their files might be stored at a FileCoin provider near-by instead of a central cloud storage, 
+
+FileCoin wants to offer options to replicate and encrypt your data according to your needs. 
+
+FileCoin tokens are used to create a storage marketplace: Users will pay for the service with FileCoins. Storage providers will get paid with FileCoins. 
+
+** How it works?
+1. Specify the file you want to upload and pay a small fee to have your request listed
+2. Storage nodes will bid on the rights to store that file(get the uploader the lowest price)
+3. Encrypts file and divides it into many segments
+4. Segments get sent to various points on the network that bid to host it
+5. Record the exact location of all your file segments (an allocation table)
+6. When recalling, private key needs to be provided
+
+
+*Sub-second Retrieval*
+** Consensus
+
+
+
+挖矿难度：挖矿难度是指每个账号每小时挖出CET的限额。为保证每天产出的CET保持平衡，平台会根据前一天挖矿产出的总量和难度值调整当天的挖矿难度。难度调整时间为每天的00:00（UTC），可通过API获取当前难度；
+
+CoinEx交易挖矿从今日（香港时间7月1日）8点上线，截至目前已挖出超过2300万枚CET，为了保持CET挖矿产出的稳定性和持续性，我们将临时把挖矿难度调整为：每个账户10,000 CET/小时，即从香港时间7月1日12时至24时，每小时每个账户可获得的挖矿收益上限为10,000CET。
+
+CET回购机制升级，由“每个季度结束时将当季手续费利润的20%用于回购CET并进行销毁”更新为“每个月结束时将当月交易平台收入利润的20%用于回购CET并进行销毁”。
+
+Difficulty: The upper limit of CET for hourly mining yield per account. To balance daily CET yield, CoinEx will readjust "mining difficulty" at 0:00 (UTC) every day based on earnings and difficulty of the last day. The initial mining difficulty is 50,000 i.e. the upper limit of hourly mining yield for an account on the first day is 50,000.  API is available to access current difficulty.
+
+\[
+f(minedTotalAmount, Difficulty)
+\]
+
+
+* CoinEx Code
+difficulty
+
+* 
+第一周，手续费这算代币的200%，
+第二， 150%
+.
+.
+.
+
+
+
+
+
+

@@ -84,7 +84,7 @@ s_1, s_2, s_3, \ldots
 \]
 
 * 类似 IPFS
-[[][So You want to decentralize your website]]
+[[https://macwright.org/2017/08/09/decentralize-ipfs.html][So You want to decentralize your website]]
 file coin
 
 IPFS makes it possible to distribute high volumes of data with high efficiency
@@ -124,6 +124,10 @@ If you add a file on your own IPFS node without pinning it, it will be garbage c
 Instead, if you pin it and keep your server running, it will exist forever.
 
 ** Costs
+Not quite related to ipfs, but is very important: FileCoin is the next step.
+
+** Question
+So IPFS content links are fully content-addressed. I suppose to make my site fully IPFS, I’d have to build each individual page and then construct a home page that linked to the generated hashes for those pages. That leaves an open question: how could two pages link to each other? Adding a link from one page to the other would change its hash, so wouldn’t it be impossible for pages to reference each other? This might be a lack-of-coffee problem on my part.
 
 
 ** CodeMentor Business Model
@@ -136,18 +140,39 @@ Asked to
 被市场要求
 CodeMentorX: 1v1 ---> 咨询
 
-quora
-
-stack overflow
-
-码市
-
-
 |      | 相亲     | 招聘        |
 |------+----------+-------------|
 | 以往 | 找媒婆   | 找猎头      |
 | 现在 | 相亲网站 | CodeMentorX |
 
+** Hiring Process
+1. Talk to consultant
+2. Get a shortlist of deves
+3. Interview them
+4. Hire and work
+
+** Payment
+*** Type
+1. Retainer Engagement
+2. Hourly Engagement
+
+*** Fee
+Developer Fee + Platform Fee
+
+** Developer
+1. Résumé Screening
+
+2. Coding Test
+
+3. Behavioral Interview
+
+4. Small Project
+
+5. Technical Interview
 
 * Appendix
 [[https://medium.com/@mycoralhealth/code-your-own-blockchain-in-less-than-200-lines-of-go-e296282bcffc][Implement Your Blockchain In Go]]
+
+Fcoin释放    卖压
+
+挖矿难度: coinex

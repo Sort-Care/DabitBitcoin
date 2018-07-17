@@ -1,0 +1,39 @@
+* Codeex Pesudocode
+[[https://hackernoon.com/how-to-build-a-simple-crypto-trading-simulator-part-1-4ccdddcd6b76][How to build a cryptocurrency simulator]] : python
+
+[[https://hackernoon.com/a-cryptocurrency-implementation-in-less-than-1500-lines-of-code-d3812bedb25c][Cryptocurrency in less than 1500 lines of code]] : Javascript
+
+* Look In Depth
+** Components
+1. HTTP server
+2. Node
+3. Blockchain
+4. Operator
+5. *Miner*
+6. Mining Difficulty
+7. Return transaction fee
+
+*** HTTP Server
+Every node provides a swagger API to make interaction easier
+
+*** Blockchain
+1. The block list (linked list)
+2. transaction list(hash map)
+
+It is responsible for:
+1. Verification of arriving blocks
+2. verification of arriving transactions
+3. Synchronization of the transaction list
+4. Synchronization of the block list
+
+hash of the next block = hash of the previous block plus the data inside the block itself
+
+** Key Functions
+1. Addresses: Holds 20 byte value. It has two 
+*** Trading
+
+*** Voting
+*** Minning
+*** 
+
+
